@@ -1,0 +1,393 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+
+*{
+margin: 0;
+padding: 0;
+border-radius: none;
+list-style: none;
+text-decoration: none;
+font-family: 'Spartan', sans-serif;
+}
+html, body {
+    overflow-x: hidden;
+}
+
+:root{
+    --bg-color:black;
+    --text-color:white;
+    --main-color:rgb(220, 183, 90);
+    --big-font:4.6rem;
+    --p-font:20px;
+}
+
+body{
+    background:var(--bg-color);
+    color:var(--text-color) ;
+}
+header{
+  width: 100%;
+  top: 0;
+  right: 0; 
+  padding: 35px 7%;
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.logo{
+    width: 100%;
+padding-left: 8em;}
+
+.list{
+    display: flex;
+}
+
+.list a{
+    margin: 0 35px ;
+    color: var(--text-color);
+    display: inline-block;
+    transition: all .6s ease;
+    font-size: var(--p-font);
+}
+
+.list a:hover{
+    color: var(--main-color);
+}
+
+.content{
+    display: flex;
+    align-items: center;
+}
+
+.btn{
+    padding: 9px 24px;
+    display: inline-block;
+    background: transparent;
+    border: 2px solid var(--text-color);
+    border-radius: 7px;
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 500;
+    transition: all .6s ease;
+}
+.btn:hover{
+    transform: translateY(5px);
+    border: 2px solid var(--main-color);
+}
+#menu{
+    font-size: 25px;
+    margin-left: 35px;
+  display: none;
+}
+section{
+    padding: 0 14%;
+}
+.hero{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../img/bg.png);
+    background-size: cover;
+    background-position: center;
+    display: grid;
+     grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 2rem;  
+}
+.img img{
+    width: 30rem;
+    height:30rem;
+    padding-right: 30em;
+}
+
+.texts h1{
+    font-size: var(--big-font);
+    font-weight: 900;
+    margin: 5px 0;
+}
+.texts h5{
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.texts p{
+    width: 100%;
+    max-width: 629px;
+    font-size: var(--p-font);
+    font-weight: 400;
+    line-height: 32px;
+    color: var(--text-color);
+    margin-bottom: 40px;
+}
+.hero{
+    display: flex;
+    align-items: center;
+}
+.img_btn{
+    display: inline-block;
+    padding: 13px 32px;
+    background: var(--main-color);
+    border: 2px solid transparent;
+    border-radius: 7px;
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 500;
+    transition: all .6s ease;
+    margin-right: 20px;
+    width: 45px;
+    height: 18px;
+    margin-bottom: 20px;
+    padding-bottom: 23px;
+}
+.img_btn:hover{
+    transform: scale(1.1);
+}
+.main_text{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+}
+
+.price{
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+.price span{
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--main-color);
+    margin-left: 10px;
+}
+.icons{
+    position: absolute;
+    top: 50%;
+    padding: 0 7%;
+    transform: translateY(-50%);
+}
+.icons i{
+    display: block;
+    margin: 35px 0;
+    color: var(--text-color);
+  font-size: 23px;
+  transition: all .6s ease;
+}
+.icons i:hover{
+    color: var(--main-color);
+    transform: translateY(-5px);
+}
+.scroll{
+    color: var(--text-color);
+    top: 92%;
+    position: absolute;
+    right: 7%;
+    transform: translateY(-50%);
+}
+.scroll a{
+    font-size: 16px;
+    color: var(--text-color);
+}
+.scroll i{
+    font-size: 20px;
+    color: var(--text-color);
+    margin-right: 12px;
+}
+
+@media(max-width:1770px){
+    .header{
+        padding: 22px 4%;
+    }
+    .icons{
+        padding: 0 4%;
+    }
+    .scroll{
+        right: 4%;
+    }
+}
+@media(max-width:1670px) {
+   :root{
+    --big-font:5.5rem;
+    --p-font:15px;
+   }
+}
+@media(max-width:1370px) {
+    .icons{
+        display: none;
+    }
+    section{
+        padding: 0 4%;
+    }
+}
+@media(max-width:1150px) {
+    :root{
+        --big-font:4.5rem
+    }
+    .price{
+        font-size: 20px;
+    }
+    .btn{
+        padding: 10px 23px;
+    }
+}
+@media(max-width:950px){
+    #menu{
+      display: block;  
+    }
+    .list{
+        position: absolute;
+        width: 100%;
+        height: 500em;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 100%;
+        display: flex;
+        flex-direction: column;
+        backdrop-filter: blur(13px);
+        transition: all .6s ease-in-out;
+    }
+    .list a{
+        display: block;
+        padding: 0;
+        margin: 20px 0px 15px 150px;
+        font-size: 17px;
+    }
+    .list.open{
+        left:0;
+    }
+}
+@media(max-width:920px){
+    .scroll{
+        display: none;
+    }
+    .hero{
+        grid-template-columns: 1fr;
+        height: au;
+    }
+    .texts{
+        padding-top: 130px;
+    }
+    .img{
+        height: 500px;
+        width: 500px;
+        margin: 0 auto;
+    }
+    .img img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+@media (max-width:570px) {
+    .hero{
+        height: 100vh;
+        
+    }
+    .img{
+        height: 400px;
+        width: 400px;
+        margin: 0 auto
+    }
+    :root{
+        --bog-font:4rem;
+    }
+}
+@media (max-width:440px) {
+    :root{
+        --big-font:3.4rem;
+    }
+    .texts h5{
+        font-size: 15px;
+    }
+    .img{
+        height: 300px;
+        width: 300px;
+        margin: 0 auto
+    }
+}
+ /* Media Queries */
+/* @media(max-width:1770px) {
+    header {
+        padding: 22px 4%;
+    }
+
+    .icons {
+        padding: 0 4%;
+    }
+
+    .scroll {
+        right: 4%;
+    }
+}
+
+@media(max-width:1670px) {
+    :root {
+        --big-font: 5.5rem;
+        --p-font: 15px;
+    }
+}
+
+@media(max-width:1370px) {
+    .icons {
+        display: none;
+    }
+
+    section {
+        padding: 0 4%;
+    }
+}
+
+@media(max-width:1150px) {
+    :root {
+        --big-font: 4.5rem;
+    }
+
+    .price {
+        font-size: 20px;
+    }
+
+    .btn {
+        padding: 10px 23px;
+    }
+}
+
+@media(max-width:950px) {
+    #menu {
+        display: block;
+    }
+
+    .list {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 100%;
+        display: flex;
+        flex-direction: column;
+        backdrop-filter: blur(32px);
+        transition: all 0.6s ease-in-out;
+    }
+
+    .list a {
+        display: block;
+        padding: 0;
+        margin: 0px 0px 25px 0px;
+        font-size: 1.7rem;
+    }
+
+    .navlist.open {
+        left: 0;
+    }
+}
+
+@media(max-width:920px) {
+    .scroll {
+        display: none;
+    } */
